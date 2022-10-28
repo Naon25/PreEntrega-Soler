@@ -12,7 +12,7 @@ function comprarProductos() {
     do{
         do{
             producto = prompt('¿Queres comprar vinos, sandwiches o tortas?');
-            cantidad = parseInt(prompt('¿Que cantidad de '+producto));
+            cantidad = parseInt(prompt('¿Que cantidad de ' +producto+ ' quiere?'));
             let opc = false;
 
             let cantidadValidada = validarCantidad(cantidad);
@@ -42,7 +42,7 @@ function comprarProductos() {
         precioIva = sumarIva(precioTotal);
         totalCompra += precioTotal;
 
-        console.log('El precio es: '+precioIva);
+        console.log('El precio total es: '+totalCompra);
 
         seguirComprando = confirm('¿Le gustaria seguir comprando?');
 
@@ -50,8 +50,9 @@ function comprarProductos() {
     while (seguirComprando)
 
     return totalCompra;
-
 }
+
+alert("El precio total a pagar es: "+precioTotal);
 
 function sumarIva(precioTotal){
     return ( precioTotal + (precioTotal * 0.21));
