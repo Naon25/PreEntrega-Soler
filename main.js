@@ -6,7 +6,8 @@ function comprarProductos() {
     let cantidad = 0;
     let opc = false;
     let totalCompra = 0;
-
+    let cantidadTotal = 0;
+    let precioTotal = 0;
 
 
     do{
@@ -40,7 +41,9 @@ function comprarProductos() {
 
         precioTotal = precio * cantidad;
         precioIva = sumarIva(precioTotal);
-        totalCompra += precioTotal;
+        totalCompra += precioIva;
+        cantidadTotal += cantidad;
+
 
         console.log('El precio total es: '+totalCompra);
 
@@ -49,10 +52,11 @@ function comprarProductos() {
     }
     while (seguirComprando)
 
+    alert("El precio total a pagar es: "+totalCompra);
+
     return totalCompra;
 }
 
-alert("El precio total a pagar es: "+precioTotal);
 
 function sumarIva(precioTotal){
     return ( precioTotal + (precioTotal * 0.21));
