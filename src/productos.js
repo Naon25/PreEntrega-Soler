@@ -10,6 +10,22 @@ let stockProductos =
 
    {
         id: 2,
+        nombre: "vino",
+        precio: 600,
+        img: 'public/images/vino1.jpg',
+        cantidad: 1
+    },
+
+    {
+        id: 3,
+        nombre: "vino",
+        precio: 1200,
+        img: 'public/images/vino1.jpg',
+        cantidad: 1
+    },
+
+    {
+        id: 4,
         nombre: "sanguche",
         precio: 600,
         img: 'public/images/sanguche.jpg',
@@ -17,9 +33,41 @@ let stockProductos =
     },
 
     {
-        id: 3,
+        id: 5,
+        nombre: "sanguche",
+        precio: 600,
+        img: 'public/images/sanguche.jpg',
+        cantidad: 1
+    },
+
+    {
+        id: 6,
+        nombre: "sanguche",
+        precio: 600,
+        img: 'public/images/sanguche.jpg',
+        cantidad: 1
+    },
+
+    {
+        id: 7,
         nombre: "torta",
-        precio: 1200,
+        precio: 600,
+        img: 'public/images/torta.jpg',
+        cantidad: 1
+    },
+
+    {
+        id: 8,
+        nombre: "torta",
+        precio: 600,
+        img: 'public/images/torta.jpg',
+        cantidad: 1
+    },
+    
+    {
+        id: 9,
+        nombre: "torta",
+        precio: 600,
         img: 'public/images/torta.jpg',
         cantidad: 1
     }

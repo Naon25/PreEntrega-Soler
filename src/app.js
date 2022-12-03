@@ -13,6 +13,9 @@ const cantidadTotal = document.getElementById('cantidadTotal')
 
 let carrito = []
 
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
@@ -31,6 +34,7 @@ stockProductos.forEach((producto) => {
     div.classList.add('producto')
     div.innerHTML = `
     <img src=${producto.img} alt= "">
+    <p>${producto.id}</p>
     <h3>${producto.nombre}</h3>
     <p class="precioProducto">Precio:$ ${producto.precio}</p>
     <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
@@ -104,3 +108,51 @@ const actualizarCarrito = () => {
 
 
 }
+
+    const buscar = () =>{
+        const buscarCaja = document.getElementById("div").nodeValue.toLowerCase();
+        
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    // const filtrar = () =>{
+
+    //     let borrar = document.getElementsByClassName("producto"); 
+    //     console.log(borrar);
+
+    //     stockProductos.forEach((producto) => {
+    //         if(producto.nombre === formulario.value){
+
+    //             console.log(formulario.value);
+
+    //             const div = document.createElement('div')
+    //             div.classList.add('producto')
+    //             div.innerHTML = `
+    //             <img src=${producto.img} alt= "">
+    //             <h3>${producto.nombre}</h3>
+    //             <p class="precioProducto">Precio:$ ${producto.precio}</p>
+    //             <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+    //             `
+    //             contenedorProductos.appendChild(div)
+            
+    //             const boton = document.getElementById(`agregar${producto.id}`)
+                
+    //             boton.addEventListener('click', () => {
+    //                 agregarAlCarrito(producto.id)
+    //             })
+    //         }
+    //     })
+    // }
+
+
+    // boton.addEventListener('click', filtrar)
