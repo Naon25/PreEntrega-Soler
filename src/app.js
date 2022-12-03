@@ -111,48 +111,44 @@ const actualizarCarrito = () => {
 
     const buscar = () =>{
         const buscarCaja = document.getElementById("div").nodeValue.toLowerCase();
-        
+
 
     }
 
 
 
+// Mi idea aca es limpiar todos los productos del html y volver a crear todos 
+// los que me tipea la persona pero no estoy pudiendo eliminarlos y no se me 
+// ocurre otra forma de poder filtrarlos
 
+    const filtrar = () =>{
 
+        let borrar = document.getElementsByClassName("producto"); 
+        console.log(borrar);
 
+        stockProductos.forEach((producto) => {
+            if(producto.nombre === formulario.value){
 
+                console.log(formulario.value);
 
-
-
-
-    // const filtrar = () =>{
-
-    //     let borrar = document.getElementsByClassName("producto"); 
-    //     console.log(borrar);
-
-    //     stockProductos.forEach((producto) => {
-    //         if(producto.nombre === formulario.value){
-
-    //             console.log(formulario.value);
-
-    //             const div = document.createElement('div')
-    //             div.classList.add('producto')
-    //             div.innerHTML = `
-    //             <img src=${producto.img} alt= "">
-    //             <h3>${producto.nombre}</h3>
-    //             <p class="precioProducto">Precio:$ ${producto.precio}</p>
-    //             <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
-    //             `
-    //             contenedorProductos.appendChild(div)
+                const div = document.createElement('div')
+                div.classList.add('producto')
+                div.innerHTML = `
+                <img src=${producto.img} alt= "">
+                <h3>${producto.nombre}</h3>
+                <p class="precioProducto">Precio:$ ${producto.precio}</p>
+                <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+                `
+                contenedorProductos.appendChild(div)
             
-    //             const boton = document.getElementById(`agregar${producto.id}`)
+                const boton = document.getElementById(`agregar${producto.id}`)
                 
-    //             boton.addEventListener('click', () => {
-    //                 agregarAlCarrito(producto.id)
-    //             })
-    //         }
-    //     })
-    // }
+                boton.addEventListener('click', () => {
+                    agregarAlCarrito(producto.id)
+                })
+            }
+        })
+    }
 
 
-    // boton.addEventListener('click', filtrar)
+    boton.addEventListener('click', filtrar)
